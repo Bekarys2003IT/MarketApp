@@ -1,19 +1,19 @@
 //
-//  ViewController.swift
+//  HomeViewController.swift
 //  MarketApp
 //
-//  Created by Бекарыс Сандыгали on 13.05.2024.
+//  Created by Бекарыс Сандыгали on 15.05.2024.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
-
+    
 
 }
-
