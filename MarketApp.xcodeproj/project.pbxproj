@@ -8,22 +8,60 @@
 
 /* Begin PBXBuildFile section */
 		DFFD3A5B2BF2679400AE5AF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFD3A5A2BF2679400AE5AF2 /* AppDelegate.swift */; };
-		DFFD3A5D2BF2679400AE5AF2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFD3A5C2BF2679400AE5AF2 /* SceneDelegate.swift */; };
-		DFFD3A5F2BF2679400AE5AF2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFD3A5E2BF2679400AE5AF2 /* ViewController.swift */; };
-		DFFD3A622BF2679400AE5AF2 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = DFFD3A612BF2679400AE5AF2 /* Base */; };
+		DFFD3A5F2BF2679400AE5AF2 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFD3A5E2BF2679400AE5AF2 /* PreviewViewController.swift */; };
 		DFFD3A642BF2679500AE5AF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFFD3A632BF2679500AE5AF2 /* Assets.xcassets */; };
 		DFFD3A672BF2679500AE5AF2 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = DFFD3A662BF2679500AE5AF2 /* Base */; };
+		DFFD3A702BF26AF000AE5AF2 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = DFFD3A6F2BF26AF000AE5AF2 /* SnapKit */; };
+		DFFD3A7D2BF2723800AE5AF2 /* SignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFD3A7C2BF2723800AE5AF2 /* SignViewController.swift */; };
+		DFFD3A852BF279D100AE5AF2 /* Lalezar-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DFFD3A7B2BF26ECE00AE5AF2 /* Lalezar-Regular.ttf */; };
+		DFFD3A862BF279D100AE5AF2 /* InriaSans-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = DFFD3A832BF2791000AE5AF2 /* InriaSans-Regular.otf */; };
+		DFFD3A8B2BF34DB800AE5AF2 /* SigninView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFD3A8A2BF34DB800AE5AF2 /* SigninView.swift */; };
+		DFFD3A8D2BF34E0500AE5AF2 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFD3A8C2BF34E0500AE5AF2 /* SignupView.swift */; };
+		DFFD3A8F2BF36DF200AE5AF2 /* SignPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFD3A8E2BF36DF200AE5AF2 /* SignPresenter.swift */; };
+		DFFD3A962BF36E5900AE5AF2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFD3A952BF36E5900AE5AF2 /* User.swift */; };
+		DFFD3A9A2BF3F2F000AE5AF2 /* TestingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFD3A992BF3F2F000AE5AF2 /* TestingPresenter.swift */; };
+		DFFD3A9D2BF3F31B00AE5AF2 /* TestingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFD3A9C2BF3F31B00AE5AF2 /* TestingViewController.swift */; };
+		DFFD3A9F2BF412E900AE5AF2 /* TestingSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFD3A9E2BF412E900AE5AF2 /* TestingSecondViewController.swift */; };
+		DFFD3AA42BF4B15D00AE5AF2 /* TestingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFD3AA32BF4B15D00AE5AF2 /* TestingModel.swift */; };
+		DFFD3AA72BF4E30300AE5AF2 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFD3AA62BF4E30300AE5AF2 /* TabBarController.swift */; };
+		DFFD3AAA2BF4E33E00AE5AF2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFD3AA92BF4E33E00AE5AF2 /* HomeViewController.swift */; };
+		DFFD3AB12BF4E58B00AE5AF2 /* BrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFD3AB02BF4E58B00AE5AF2 /* BrowseViewController.swift */; };
+		DFFD3AB52BF4E64A00AE5AF2 /* BasketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFD3AB42BF4E64A00AE5AF2 /* BasketViewController.swift */; };
+		DFFD3ABA2BF4E70F00AE5AF2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFD3AB92BF4E70F00AE5AF2 /* ProfileViewController.swift */; };
+		DFFD3ABC2BF507F100AE5AF2 /* FoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFD3ABB2BF507F100AE5AF2 /* FoodTableViewCell.swift */; };
+		DFFD3ABE2BF5090F00AE5AF2 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFD3ABD2BF5090F00AE5AF2 /* HomeModel.swift */; };
+		DFFD3AC02BF5094D00AE5AF2 /* HomeButtonPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFD3ABF2BF5094D00AE5AF2 /* HomeButtonPresenter.swift */; };
+		DFFD3AC52BF6A25100AE5AF2 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = DFFD3AC42BF6A25100AE5AF2 /* Kingfisher */; };
+		DFFD3AC72BF6B66600AE5AF2 /* FoodNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFD3AC62BF6B66600AE5AF2 /* FoodNetworking.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DFFD3A572BF2679400AE5AF2 /* MarketApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarketApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFFD3A5A2BF2679400AE5AF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DFFD3A5C2BF2679400AE5AF2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DFFD3A5E2BF2679400AE5AF2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DFFD3A612BF2679400AE5AF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DFFD3A5E2BF2679400AE5AF2 /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 		DFFD3A632BF2679500AE5AF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DFFD3A662BF2679500AE5AF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DFFD3A682BF2679500AE5AF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFFD3A7B2BF26ECE00AE5AF2 /* Lalezar-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lalezar-Regular.ttf"; sourceTree = "<group>"; };
+		DFFD3A7C2BF2723800AE5AF2 /* SignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignViewController.swift; sourceTree = "<group>"; };
+		DFFD3A832BF2791000AE5AF2 /* InriaSans-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "InriaSans-Regular.otf"; sourceTree = "<group>"; };
+		DFFD3A8A2BF34DB800AE5AF2 /* SigninView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninView.swift; sourceTree = "<group>"; };
+		DFFD3A8C2BF34E0500AE5AF2 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
+		DFFD3A8E2BF36DF200AE5AF2 /* SignPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignPresenter.swift; sourceTree = "<group>"; };
+		DFFD3A952BF36E5900AE5AF2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		DFFD3A992BF3F2F000AE5AF2 /* TestingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingPresenter.swift; sourceTree = "<group>"; };
+		DFFD3A9C2BF3F31B00AE5AF2 /* TestingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingViewController.swift; sourceTree = "<group>"; };
+		DFFD3A9E2BF412E900AE5AF2 /* TestingSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingSecondViewController.swift; sourceTree = "<group>"; };
+		DFFD3AA32BF4B15D00AE5AF2 /* TestingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingModel.swift; sourceTree = "<group>"; };
+		DFFD3AA62BF4E30300AE5AF2 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		DFFD3AA92BF4E33E00AE5AF2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		DFFD3AB02BF4E58B00AE5AF2 /* BrowseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseViewController.swift; sourceTree = "<group>"; };
+		DFFD3AB42BF4E64A00AE5AF2 /* BasketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketViewController.swift; sourceTree = "<group>"; };
+		DFFD3AB92BF4E70F00AE5AF2 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		DFFD3ABB2BF507F100AE5AF2 /* FoodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTableViewCell.swift; sourceTree = "<group>"; };
+		DFFD3ABD2BF5090F00AE5AF2 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		DFFD3ABF2BF5094D00AE5AF2 /* HomeButtonPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeButtonPresenter.swift; sourceTree = "<group>"; };
+		DFFD3AC62BF6B66600AE5AF2 /* FoodNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodNetworking.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +69,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFFD3AC52BF6A25100AE5AF2 /* Kingfisher in Frameworks */,
+				DFFD3A702BF26AF000AE5AF2 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +96,201 @@
 		DFFD3A592BF2679400AE5AF2 /* MarketApp */ = {
 			isa = PBXGroup;
 			children = (
+				DFFD3AA52BF4E2D400AE5AF2 /* MainVC */,
 				DFFD3A5A2BF2679400AE5AF2 /* AppDelegate.swift */,
-				DFFD3A5C2BF2679400AE5AF2 /* SceneDelegate.swift */,
-				DFFD3A5E2BF2679400AE5AF2 /* ViewController.swift */,
-				DFFD3A602BF2679400AE5AF2 /* Main.storyboard */,
+				DFFD3A5E2BF2679400AE5AF2 /* PreviewViewController.swift */,
+				DFFD3A972BF3F1E400AE5AF2 /* Testing */,
+				DFFD3A892BF349B700AE5AF2 /* Login */,
 				DFFD3A632BF2679500AE5AF2 /* Assets.xcassets */,
 				DFFD3A652BF2679500AE5AF2 /* LaunchScreen.storyboard */,
 				DFFD3A682BF2679500AE5AF2 /* Info.plist */,
+				DFFD3A7B2BF26ECE00AE5AF2 /* Lalezar-Regular.ttf */,
+				DFFD3A832BF2791000AE5AF2 /* InriaSans-Regular.otf */,
+				DFFD3A792BF26EC100AE5AF2 /* Fonts */,
 			);
 			path = MarketApp;
+			sourceTree = "<group>";
+		};
+		DFFD3A792BF26EC100AE5AF2 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		DFFD3A892BF349B700AE5AF2 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				DFFD3A942BF36E3C00AE5AF2 /* Model */,
+				DFFD3A902BF36DF800AE5AF2 /* Presenter */,
+				DFFD3A922BF36E1D00AE5AF2 /* Views */,
+				DFFD3A912BF36E0B00AE5AF2 /* CustomView */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		DFFD3A902BF36DF800AE5AF2 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				DFFD3A8E2BF36DF200AE5AF2 /* SignPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		DFFD3A912BF36E0B00AE5AF2 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				DFFD3A8A2BF34DB800AE5AF2 /* SigninView.swift */,
+				DFFD3A8C2BF34E0500AE5AF2 /* SignupView.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		DFFD3A922BF36E1D00AE5AF2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DFFD3A7C2BF2723800AE5AF2 /* SignViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DFFD3A942BF36E3C00AE5AF2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DFFD3A952BF36E5900AE5AF2 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DFFD3A972BF3F1E400AE5AF2 /* Testing */ = {
+			isa = PBXGroup;
+			children = (
+				DFFD3AA22BF4B14700AE5AF2 /* TestingModel */,
+				DFFD3A9B2BF3F2FD00AE5AF2 /* TestingView */,
+				DFFD3A982BF3F2C400AE5AF2 /* TestingPresenter */,
+			);
+			path = Testing;
+			sourceTree = "<group>";
+		};
+		DFFD3A982BF3F2C400AE5AF2 /* TestingPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				DFFD3A992BF3F2F000AE5AF2 /* TestingPresenter.swift */,
+			);
+			path = TestingPresenter;
+			sourceTree = "<group>";
+		};
+		DFFD3A9B2BF3F2FD00AE5AF2 /* TestingView */ = {
+			isa = PBXGroup;
+			children = (
+				DFFD3A9C2BF3F31B00AE5AF2 /* TestingViewController.swift */,
+				DFFD3A9E2BF412E900AE5AF2 /* TestingSecondViewController.swift */,
+			);
+			path = TestingView;
+			sourceTree = "<group>";
+		};
+		DFFD3AA22BF4B14700AE5AF2 /* TestingModel */ = {
+			isa = PBXGroup;
+			children = (
+				DFFD3AA32BF4B15D00AE5AF2 /* TestingModel.swift */,
+			);
+			path = TestingModel;
+			sourceTree = "<group>";
+		};
+		DFFD3AA52BF4E2D400AE5AF2 /* MainVC */ = {
+			isa = PBXGroup;
+			children = (
+				DFFD3AA62BF4E30300AE5AF2 /* TabBarController.swift */,
+				DFFD3AB62BF4E6DE00AE5AF2 /* Profile */,
+				DFFD3AB22BF4E62E00AE5AF2 /* Basket */,
+				DFFD3AAE2BF4E4D400AE5AF2 /* Browse */,
+				DFFD3AA82BF4E31000AE5AF2 /* Home */,
+			);
+			path = MainVC;
+			sourceTree = "<group>";
+		};
+		DFFD3AA82BF4E31000AE5AF2 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				DFFD3AAD2BF4E4BD00AE5AF2 /* HomeModel */,
+				DFFD3AAC2BF4E4B300AE5AF2 /* HomePresenter */,
+				DFFD3AAB2BF4E49F00AE5AF2 /* HomeView */,
+				DFFD3AC62BF6B66600AE5AF2 /* FoodNetworking.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		DFFD3AAB2BF4E49F00AE5AF2 /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				DFFD3AA92BF4E33E00AE5AF2 /* HomeViewController.swift */,
+				DFFD3ABB2BF507F100AE5AF2 /* FoodTableViewCell.swift */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		DFFD3AAC2BF4E4B300AE5AF2 /* HomePresenter */ = {
+			isa = PBXGroup;
+			children = (
+				DFFD3ABF2BF5094D00AE5AF2 /* HomeButtonPresenter.swift */,
+			);
+			path = HomePresenter;
+			sourceTree = "<group>";
+		};
+		DFFD3AAD2BF4E4BD00AE5AF2 /* HomeModel */ = {
+			isa = PBXGroup;
+			children = (
+				DFFD3ABD2BF5090F00AE5AF2 /* HomeModel.swift */,
+			);
+			path = HomeModel;
+			sourceTree = "<group>";
+		};
+		DFFD3AAE2BF4E4D400AE5AF2 /* Browse */ = {
+			isa = PBXGroup;
+			children = (
+				DFFD3AAF2BF4E57900AE5AF2 /* BrowseView */,
+			);
+			path = Browse;
+			sourceTree = "<group>";
+		};
+		DFFD3AAF2BF4E57900AE5AF2 /* BrowseView */ = {
+			isa = PBXGroup;
+			children = (
+				DFFD3AB02BF4E58B00AE5AF2 /* BrowseViewController.swift */,
+			);
+			path = BrowseView;
+			sourceTree = "<group>";
+		};
+		DFFD3AB22BF4E62E00AE5AF2 /* Basket */ = {
+			isa = PBXGroup;
+			children = (
+				DFFD3AB32BF4E63700AE5AF2 /* BasketView */,
+			);
+			path = Basket;
+			sourceTree = "<group>";
+		};
+		DFFD3AB32BF4E63700AE5AF2 /* BasketView */ = {
+			isa = PBXGroup;
+			children = (
+				DFFD3AB42BF4E64A00AE5AF2 /* BasketViewController.swift */,
+			);
+			path = BasketView;
+			sourceTree = "<group>";
+		};
+		DFFD3AB62BF4E6DE00AE5AF2 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				DFFD3AB82BF4E6F900AE5AF2 /* ProfileView */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		DFFD3AB82BF4E6F900AE5AF2 /* ProfileView */ = {
+			isa = PBXGroup;
+			children = (
+				DFFD3AB92BF4E70F00AE5AF2 /* ProfileViewController.swift */,
+			);
+			path = ProfileView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +309,10 @@
 			dependencies = (
 			);
 			name = MarketApp;
+			packageProductDependencies = (
+				DFFD3A6F2BF26AF000AE5AF2 /* SnapKit */,
+				DFFD3AC42BF6A25100AE5AF2 /* Kingfisher */,
+			);
 			productName = MarketApp;
 			productReference = DFFD3A572BF2679400AE5AF2 /* MarketApp.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +341,10 @@
 				Base,
 			);
 			mainGroup = DFFD3A4E2BF2679400AE5AF2;
+			packageReferences = (
+				DFFD3A6E2BF26AF000AE5AF2 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				DFFD3AC32BF6A25100AE5AF2 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = DFFD3A582BF2679400AE5AF2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,9 +359,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFFD3A852BF279D100AE5AF2 /* Lalezar-Regular.ttf in Resources */,
+				DFFD3A862BF279D100AE5AF2 /* InriaSans-Regular.otf in Resources */,
 				DFFD3A642BF2679500AE5AF2 /* Assets.xcassets in Resources */,
 				DFFD3A672BF2679500AE5AF2 /* Base in Resources */,
-				DFFD3A622BF2679400AE5AF2 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +373,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DFFD3A5F2BF2679400AE5AF2 /* ViewController.swift in Sources */,
+				DFFD3AB52BF4E64A00AE5AF2 /* BasketViewController.swift in Sources */,
+				DFFD3A5F2BF2679400AE5AF2 /* PreviewViewController.swift in Sources */,
+				DFFD3ABE2BF5090F00AE5AF2 /* HomeModel.swift in Sources */,
+				DFFD3A9F2BF412E900AE5AF2 /* TestingSecondViewController.swift in Sources */,
+				DFFD3A7D2BF2723800AE5AF2 /* SignViewController.swift in Sources */,
+				DFFD3AA42BF4B15D00AE5AF2 /* TestingModel.swift in Sources */,
+				DFFD3A8B2BF34DB800AE5AF2 /* SigninView.swift in Sources */,
+				DFFD3ABA2BF4E70F00AE5AF2 /* ProfileViewController.swift in Sources */,
+				DFFD3A9D2BF3F31B00AE5AF2 /* TestingViewController.swift in Sources */,
+				DFFD3AC02BF5094D00AE5AF2 /* HomeButtonPresenter.swift in Sources */,
+				DFFD3AB12BF4E58B00AE5AF2 /* BrowseViewController.swift in Sources */,
 				DFFD3A5B2BF2679400AE5AF2 /* AppDelegate.swift in Sources */,
-				DFFD3A5D2BF2679400AE5AF2 /* SceneDelegate.swift in Sources */,
+				DFFD3A8D2BF34E0500AE5AF2 /* SignupView.swift in Sources */,
+				DFFD3A8F2BF36DF200AE5AF2 /* SignPresenter.swift in Sources */,
+				DFFD3AA72BF4E30300AE5AF2 /* TabBarController.swift in Sources */,
+				DFFD3A962BF36E5900AE5AF2 /* User.swift in Sources */,
+				DFFD3AAA2BF4E33E00AE5AF2 /* HomeViewController.swift in Sources */,
+				DFFD3ABC2BF507F100AE5AF2 /* FoodTableViewCell.swift in Sources */,
+				DFFD3A9A2BF3F2F000AE5AF2 /* TestingPresenter.swift in Sources */,
+				DFFD3AC72BF6B66600AE5AF2 /* FoodNetworking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		DFFD3A602BF2679400AE5AF2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DFFD3A612BF2679400AE5AF2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DFFD3A652BF2679500AE5AF2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -297,7 +541,7 @@
 				INFOPLIST_FILE = MarketApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -325,7 +569,7 @@
 				INFOPLIST_FILE = MarketApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -363,6 +607,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DFFD3A6E2BF26AF000AE5AF2 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+		DFFD3AC32BF6A25100AE5AF2 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.11.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DFFD3A6F2BF26AF000AE5AF2 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DFFD3A6E2BF26AF000AE5AF2 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		DFFD3AC42BF6A25100AE5AF2 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DFFD3AC32BF6A25100AE5AF2 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DFFD3A4F2BF2679400AE5AF2 /* Project object */;
 }

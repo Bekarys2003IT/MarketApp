@@ -7,7 +7,17 @@
 
 import UIKit
 
-class SignViewController: UIViewController {
+protocol SignViewProtocol: AnyObject {
+    func updateSignInVisibility(isVisible: Bool)
+}
+
+protocol SignPresenterProtocol: AnyObject {
+    init(view: SignViewProtocol)
+    func segmentedControlChanged(selectedIndex: Int)
+}
+class SignViewController: UIViewController, SignViewProtocol {
+    
+    private var presenter: SignPresenterProtocol!
     
     private lazy var bowlImage:UIImageView = {
         let image = UIImageView()
@@ -43,6 +53,7 @@ class SignViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        presenter = SignPresenter(view: self)
         setUI()
         segmentedControlChanged()
     }
@@ -92,17 +103,21 @@ class SignViewController: UIViewController {
     
     @objc private func segmentedControlChanged() {
         let selectedIndex = segmentControl.selectedSegmentIndex
-        UIView.animate(withDuration: 0.5) {
-            self.signInView.alpha = (selectedIndex == 0) ? 1 : 0
-            self.signUpView.alpha = (selectedIndex == 0) ? 0 : 1
-            
-            // Update the underline position dynamically
-            self.underlineView.snp.updateConstraints { make in
-                make.left.equalTo(self.segmentControl.snp.left).offset(selectedIndex * Int(self.segmentControl.frame.width / CGFloat(self.segmentControl.numberOfSegments)))
-            }
-            self.view.layoutIfNeeded() // Animate the layout update
-        }
+                presenter.segmentedControlChanged(selectedIndex: selectedIndex)
     }
+    func updateSignInVisibility(isVisible: Bool) {
+            UIView.animate(withDuration: 0.5) {
+                self.signInView.alpha = isVisible ? 1 : 0
+                self.signUpView.alpha = isVisible ? 0 : 1
+                
+                // Update the underline position dynamically
+                self.underlineView.snp.updateConstraints { make in
+                    make.left.equalTo(self.segmentControl.snp.left).offset(self.segmentControl.selectedSegmentIndex * Int(self.segmentControl.frame.width / CGFloat(self.segmentControl.numberOfSegments)))
+                }
+                self.view.layoutIfNeeded() // Animate the layout update
+            }
+        }
+    
    
     
 

@@ -11,19 +11,25 @@ class TabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .white
+        self.setBars()
+        self.tabBar.barTintColor = .darkGray
+        self.tabBar.tintColor = UIColor(red: 35/255, green: 129/255, blue: 56/255, alpha: 1.0)
+        self.tabBar.unselectedItemTintColor = .darkGray
+    }
+    private func setBars(){
+        let homeVC = self.createNav(with: "Home", and: UIImage(systemName: "house"), vc: HomeViewController())
+        let browseVC = self.createNav(with: "Browse", and: UIImage(systemName: "fork.knife"), vc: BrowseViewController())
+        let basketVC = self.createNav(with: "Basket", and: UIImage(systemName: "basket"), vc: BasketViewController())
+        let profileVC = self.createNav(with: "Profile", and: UIImage(systemName: "person"), vc: ProfileViewController())
+        self.setViewControllers([homeVC,browseVC,basketVC,profileVC], animated: true)
+        selectedIndex = 0
+    }
+    private func createNav(with title:String, and image:UIImage?, vc:UIViewController) -> UINavigationController{
+        let nav  = UINavigationController(rootViewController: vc)
+        vc.tabBarItem.title = title
+        vc.tabBarItem.image = image
+        return nav
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

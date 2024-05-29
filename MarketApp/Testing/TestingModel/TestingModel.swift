@@ -6,3 +6,7 @@
 //
 
 import Foundation
+struct TestingModel{
+    var questionText:String
+    var options: [String]
+}
