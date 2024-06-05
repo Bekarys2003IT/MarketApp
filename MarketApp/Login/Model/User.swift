@@ -5,9 +5,12 @@
 //  Created by Бекарыс Сандыгали on 14.05.2024.
 //
 
-import Foundation
+import UIKit
+
 struct User {
-    var name:String
-    var email:String
-    var password:String
+    var fullName: String
+    var phoneNumber: String
+    var email: String
+    var password: String
 }
+

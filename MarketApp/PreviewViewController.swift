@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import FirebaseAuth
 class PreviewViewController: UIViewController {
 
     private lazy var nutriImageView:UIImageView = {
@@ -26,6 +27,7 @@ class PreviewViewController: UIViewController {
         view.backgroundColor = .white
         setUI()
         animationLabelText("Delicious foods")
+        performInitialSetup()
     }
     private func animationLabelText(_ text: String){
         nutriLabel.text = ""
@@ -41,21 +43,11 @@ class PreviewViewController: UIViewController {
             } else {
                 timer.invalidate()
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
-                    self?.showNextViewController()
+                    self?.decideNavigationPath()
                 }
             }
         }
     }
-
-    func showNextViewController() {
-    let mainViewController = TestingViewController()
-        if let window = UIApplication.shared.delegate?.window {
-          window?.rootViewController = UINavigationController(rootViewController: mainViewController)
-            UIView.transition(with: window!, duration: 1.0, options: .transitionCrossDissolve, animations: nil, completion: nil)
-            }
-        }
-    
-    
     private func setUI(){
         view.addSubview(nutriImageView)
         view.addSubview(nutriLabel)
@@ -72,6 +64,60 @@ class PreviewViewController: UIViewController {
         }
         
     }
+    private func performInitialSetup() {
+           DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+               self.decideNavigationPath()
+           }
+       }
+    private func decideNavigationPath() {
+        let isUserLoggedIn = Auth.auth().currentUser != nil
+            let hasCompletedTesting = UserDefaults.standard.bool(forKey: "hasCompletedTesting")
+            print("User is logged in: \(isUserLoggedIn)")
+            print("Has completed testing: \(hasCompletedTesting)")
+
+            if isUserLoggedIn {
+                if hasCompletedTesting {
+                    print("Navigating to Main App")
+                    navigateToMainApp()
+                } else {
+                    print("Navigating to Testing")
+                    navigateToTesting()
+                }
+            } else {
+                print("Navigating to Sign In")
+                navigateToSignIn()
+            }
+    }
+    private func navigateToMainApp() {
+           let tabBarVC = TabBarController()
+           navigationController?.setViewControllers([tabBarVC], animated: true)
+       }
+
+       private func navigateToSignIn() {
+           let signVC = SignViewController()
+           navigationController?.setViewControllers([signVC], animated: true)
+       }
+
+       private func navigateToTesting() {
+           let testingVC = TestingViewController()
+           navigationController?.setViewControllers([testingVC], animated: true)
+       }
+//    func showNextViewController() {
+//           let mainViewController = determineMainViewController()
+//           if let window = UIApplication.shared.delegate?.window {
+//               UIView.transition(with: window!, duration: 1.0, options: .transitionCrossDissolve, animations: {
+//                   window?.rootViewController = UINavigationController(rootViewController: mainViewController)
+//               }, completion: nil)
+//           }
+//       }
+//    private func determineMainViewController() -> UIViewController {
+//            if Auth.auth().currentUser != nil {
+//                return TabBarController()
+//            } else {
+//                return SignViewController()
+//            }
+//        }
+//    
 
 
 }

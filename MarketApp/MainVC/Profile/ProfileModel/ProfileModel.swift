@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+struct ProfileModel {
+    let name:String
+    let email:String
+}

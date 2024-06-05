@@ -13,4 +13,5 @@ struct UserModel {
     let email:String
     let number:String
     let password:String
+    //let image:UIImageView
 }

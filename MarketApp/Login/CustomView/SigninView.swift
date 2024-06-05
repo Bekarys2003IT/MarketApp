@@ -9,15 +9,16 @@ import UIKit
 
 class SigninView: UIView {
 
-    private let emailTextField: UITextField = {
+    var onLoginTapped: ((_ phoneNumber: String, _ password: String) -> Void)?
+     let emailTextField: UITextField = {
            let textField = UITextField()
-           textField.placeholder = "Email Address"
+           textField.placeholder = "Email"
            textField.borderStyle = .roundedRect
            textField.autocapitalizationType = .none
            return textField
        }()
 
-       private let passwordTextField: UITextField = {
+        let passwordTextField: UITextField = {
            let textField = UITextField()
            textField.placeholder = "Password"
            textField.borderStyle = .roundedRect
@@ -30,6 +31,7 @@ class SigninView: UIView {
            button.setTitle("Login", for: .normal)
            button.backgroundColor = UIColor(red: 35/255, green: 129/255, blue: 56/255, alpha: 1.0)
            button.setTitleColor(.white, for: .normal)
+           button.addTarget(self, action: #selector(handleLoginButtonTapped), for: .touchUpInside)
            button.layer.cornerRadius = 5
            return button
        }()
@@ -66,5 +68,15 @@ class SigninView: UIView {
                make.height.equalTo(50)
            }
        }
+    func prepareForSignIn() {
+        emailTextField.text = ""
+        passwordTextField.text = ""
+    }
+    @objc private func handleLoginButtonTapped(){
+        let email = emailTextField.text ?? ""
+        let password = passwordTextField.text ?? ""
+        onLoginTapped?(email, password)
+    }
 
 }
+

@@ -15,7 +15,7 @@ struct FoodItem: Codable {
     let title: String
     let image: String
     let price: String
-//    let isLiked: Bool?
+    var isLiked: Bool?
 }
 struct Root: Codable {
     let results: [FoodItem]

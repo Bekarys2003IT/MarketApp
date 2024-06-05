@@ -136,6 +136,20 @@ class TestingViewController: UIViewController {
             guard let index = optionButtons.firstIndex(of: sender) else { return }
             presenter.optionSelected(index: index)
         }
+    func completeTest() {
+            UserDefaults.standard.set(true, forKey: "hasCompletedTesting")
+            UserDefaults.standard.synchronize()
+        let testCompleted = UserDefaults.standard.bool(forKey: "hasCompletedTesting")
+            print("Test completed flag set to: \(testCompleted)")
+            navigateToMainApp()
+        }
+
+    private func navigateToMainApp() {
+            let tabBarVC = TabBarController()
+            if let navigator = navigationController {
+                navigator.setViewControllers([tabBarVC], animated: true)
+            }
+        }
 
 }
 

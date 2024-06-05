@@ -9,6 +9,7 @@ import UIKit
 
 class UserViewController: UIViewController {
 
+    var presenter: UserPresenterProtocol?
 
     private lazy var detailsLabel:UILabel = {
         let label = UILabel()
@@ -21,6 +22,9 @@ class UserViewController: UIViewController {
         let button = UIButton()
         button.setImage(UIImage(systemName: "person.circle"), for: .normal)
         button.tintColor = .darkGray
+        button.contentVerticalAlignment = .fill
+        button.contentHorizontalAlignment = .fill
+        button.imageEdgeInsets = UIEdgeInsets(top: 12, left: 12, bottom: 12, right: 12)
         return button
     }()
     private lazy var nameTextField:UITextField = {
@@ -79,10 +83,14 @@ class UserViewController: UIViewController {
         button.layer.borderWidth = 1
         return button
     }()
-    
+    override func viewWillAppear(_ animated: Bool) {
+           super.viewWillAppear(animated)
+           presenter?.viewWillAppear()
+       }
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        view.backgroundColor = UIColor(named: "backgroundColor")
+        presenter = UserPresenter(view: self, authService: AuthenticationService())
         setUI()
     }
     private func setUI(){
@@ -144,4 +152,12 @@ class UserViewController: UIViewController {
             eyeButton.isSelected.toggle()
         }
 
+}
+extension UserViewController {
+    func displayUserData(_ userModel: UserModel) {
+            nameTextField.text = userModel.name
+            emailTextField.text = userModel.email
+            phoneTextField.text = userModel.number
+        passwordTextField.text = userModel.password
+        }
 }

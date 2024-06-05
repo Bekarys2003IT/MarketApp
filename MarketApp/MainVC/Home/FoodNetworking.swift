@@ -10,21 +10,20 @@ protocol FoodViewDelegate: AnyObject {
     func displayFoodItems(_ items: [FoodItem])
     func displayError(_ error: String)
 }
-class FoodPresenter {
+class FoodNetworking {
     weak var delegate : FoodViewDelegate?
-    
+    private let foodDB = FoodDB()
     func loadItems() {
         fetchFoodItems { [weak self] result in
-            DispatchQueue.main.async {
-                switch result {
-                case .success(let items) :
-                    self?.delegate?.displayFoodItems(items)
-                case .failure(let error) :
-                    self?.delegate?.displayError(error.localizedDescription)
+                DispatchQueue.main.async {
+                    switch result {
+                    case .success(let items):
+                        self?.delegate?.displayFoodItems(items)
+                    case .failure(let error):
+                        self?.delegate?.displayError(error.localizedDescription)
+                    }
                 }
             }
-            
-        }
     }
     private func fetchFoodItems(completion: @escaping (Result<[FoodItem], Error>) -> Void) {
         let urlString = "https://neobook.online/coffeshop/products/"
@@ -34,7 +33,7 @@ class FoodPresenter {
         }
 
         URLSession.shared.dataTask(with: url) { data, response, error in
-            print("Response: \(response)")
+            print("Response: \(String(describing: response))")
             if let error = error {
                 print("Network request failed: \(error)")
                 completion(.failure(error))
@@ -48,7 +47,7 @@ class FoodPresenter {
             do {
                 let decoder = JSONDecoder()
                 let decodedData = try decoder.decode(Root.self, from: data)
-                print("Decoded items: \(decodedData.results.count)")
+                print("Decoded items: \(decodedData.results)")
                 completion(.success(decodedData.results))
             } catch {
                 print("Failed to decode JSON: \(error)")
@@ -56,4 +55,16 @@ class FoodPresenter {
             }
         }.resume()
     }
+    func updateFavoriteStatus(for item: FoodItem) {
+            print("Updating status for item: \(item.title) with isLiked: \(String(describing: item.isLiked))")
+            foodDB.updateFavoriteStatus(for: item) { result in
+                switch result {
+                case .success():
+                    print("Successfully updated favorite status in Firestore")
+                    NotificationCenter.default.post(name: .favoritesUpdated, object: nil)
+                case .failure(let error):
+                    print("Error updating favorite status: \(error)")
+                }
+            }
+        }
 }
